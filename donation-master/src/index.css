@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins" !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.triangle-left-top-big {
+  clip-path: polygon(
+    75% 0,
+    75% 62.5%,
+    100% 62.5%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    62.5% 100%,
+    62.5% 75%,
+    0 75%,
+    75% 0
+  );
+}
+
+.triangle-left-top-small {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0);
+}
+
+.triangle-right-top-big {
+  clip-path: polygon(
+    25% 0,
+    100% 75%,
+    37.5% 75%,
+    37.5% 100%,
+    25% 100%,
+    25% 75%,
+    0 75%,
+    0 62.5%,
+    25% 62.5%,
+    25% 0
+  );
+}
+
+.triangle-right-top-small {
+  clip-path: polygon(0 0, 100% 100%, 0 100%, 0 0);
+}
+
+.triangle-left-bottom-big {
+  clip-path: polygon(
+    0 25%,
+    62.5% 25%,
+    62.5% 0,
+    75% 0,
+    75% 25%,
+    100% 25%,
+    100% 37.5%,
+    75% 37.5%,
+    75% 100%,
+    0 25%
+  );
+}
+
+.triangle-left-bottom-small {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+}
+
+.triangle-right-bottom-big {
+  clip-path: polygon(
+    25% 0,
+    37.5% 0,
+    37.5% 25%,
+    100% 25%,
+    25% 100%,
+    25% 37.5%,
+    0 37.5%,
+    0 25%,
+    25% 25%,
+    25% 0
+  );
+}
+
+.triangle-right-bottom-small {
+  clip-path: polygon(0 0, 100% 0, 0 100%, 0 0);
+}
+
+.circle {
+  animation: spinSlowPause 2s infinite ease-out;
+  box-shadow: 0.2rem 0.4rem 2.4rem rgba(0, 0, 0, 0.4);
+  /* border: 0. 62.5% solid transparent;
+  border-image: linear-gradient(red, yellow);
+  border-image-slice: 1; */
+}
+
+@keyframes spinSlowPause {
+  /* 0% {
+    transform: rotate(0);
+  } */
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.loader {
+  animation: spinSlowDelay 2s infinite ease-out;
+  overflow: hidden;
+}
+
+@keyframes spinSlowDelay {
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+/* Not Found Animation  */
+.fundo {
+  animation: scales 3s alternate infinite;
+  transform-origin: center;
+}
+.pao-baixo {
+  animation: rotatepao 14s cubic-bezier(0.1, 0.49, 0.41, 0.97) infinite;
+  transform-origin: center;
+}
+.pao-cima {
+  animation: rotatepao 7s 1s cubic-bezier(0.1, 0.49, 0.41, 0.97) infinite;
+  transform-origin: center;
+}
+.olhos {
+  animation: olhos 2s alternate infinite;
+  transform-origin: center;
+}
+
+.left-sparks {
+  animation: left-sparks 4s alternate infinite;
+  transform-origin: 150px 156px;
+}
+
+.right-sparks {
+  animation: left-sparks 4s alternate infinite;
+  transform-origin: 310px 150px;
+}
+
+.olhos {
+  animation: olhos 2s alternate infinite;
+  transform-origin: center;
+}
+@keyframes scales {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotatepao {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%,
+  60% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes olhos {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(30deg);
+  }
+}
+
+@keyframes left-sparks {
+  0% {
+    opacity: 0;
+  }
+}
+
+.main {
+  margin: 0px auto;
+  width: auto;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 4s alternate infinite;
+}
+
+@keyframes dash {
+  0%,
+  30% {
+    fill: 4B4B62;
+    stroke-dashoffset: 0;
+  }
+  80%,
+  100% {
+    fill: transparent;
+    stroke-dashoffset: -200;
+  }
+}
+
+.backgroundImageNgo {
+  background-image: url("./components/Ngo/bgimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.backgroundImageUser {
+  background-image: url("./components/User/userImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@tailwind utilities;
