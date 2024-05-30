@@ -13,8 +13,8 @@ To develop the frontend of our website, We utilized the framework ReactJS and co
 - Vercel
 
 ### Testing credentials
-**User Login**: Email : shivansharora@gmail.com   Password : vipul123 <br/>
-**NGO Login**: Email : vipul@gmail.com   Password : vipul123
+**User Login**: Email : joshi.sameer2011@gmail.com   Password : sameer123 <br/>
+**NGO Login**: Email : sher123@gmail.com   Password : sher123
 
 
 ### Challenges we ran into
